@@ -1,0 +1,142 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: YITH WooCommerce Brands Add-On\n"
+"POT-Creation-Date: 2015-05-21 11:46+0100\n"
+"PO-Revision-Date: 2015-04-30 17:08+0100\n"
+"Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
+"Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8beta3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../plugin-fw\n"
+
+#: ../includes/class.yith-wcbr-admin.php:72
+#: ../includes/class.yith-wcbr-admin.php:281
+msgid "Settings"
+msgstr ""
+
+#: ../includes/class.yith-wcbr-admin.php:117
+msgid "Choose an image"
+msgstr ""
+
+#: ../includes/class.yith-wcbr-admin.php:118
+msgid "Use image"
+msgstr ""
+
+#: ../includes/class.yith-wcbr-admin.php:181
+msgid "Image"
+msgstr ""
+
+#: ../includes/class.yith-wcbr-admin.php:211
+#: ../templates/admin/add-brand-taxonomy-form.php:17
+#: ../templates/admin/edit-brand-taxonomy-form.php:16
+msgid "Thumbnail"
+msgstr ""
+
+#: ../includes/class.yith-wcbr-admin.php:225
+msgid ""
+"Product brands for your store can be managed here. To display more brands "
+"here, click on \"screen options\" link on top of the page."
+msgstr ""
+
+#: ../includes/class.yith-wcbr-admin.php:240
+#: ../includes/class.yith-wcbr-admin.php:241
+#: ../includes/class.yith-wcbr.php:96 ../includes/class.yith-wcbr.php:112
+msgid "Brands"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:97
+msgid "Brand"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:98
+msgid "All Brands"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:99
+msgid "Edit Brand"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:100
+msgid "View Brand"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:101
+msgid "Update Brand"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:102
+msgid "Add New Brand"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:103
+msgid "New Brand Name"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:104
+msgid "Parent Brand"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:105
+msgid "Parent Brand:"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:106
+msgid "Search Brands"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:107
+msgid "Separate brands with commas"
+msgstr ""
+
+#: ../includes/class.yith-wcbr.php:108
+msgid "No Brands Found"
+msgstr ""
+
+#: ../init.php:103
+msgid ""
+"YITH WooCommerce Brands Add-on is enabled but not effective. It requires "
+"WooCommerce in order to work."
+msgstr ""
+
+#: ../init.php:113
+msgid ""
+"You can't activate the free version of YITH WooCommerce Brands Add-on while "
+"using the premium one."
+msgstr ""
+
+#: ../plugin-options/settings-options.php:20
+msgid "General"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:28
+msgid "Brand label"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:30
+msgid "Label used for \"Brand\" link"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:31
+msgid "Brands:"
+msgstr ""
+
+#: ../templates/admin/add-brand-taxonomy-form.php:21
+#: ../templates/admin/edit-brand-taxonomy-form.php:21
+msgid "Upload/Add image"
+msgstr ""
+
+#: ../templates/admin/add-brand-taxonomy-form.php:22
+#: ../templates/admin/edit-brand-taxonomy-form.php:22
+msgid "Remove image"
+msgstr ""
