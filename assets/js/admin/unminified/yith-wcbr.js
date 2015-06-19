@@ -10,10 +10,14 @@
 jQuery( document ).ready( function( $ ){
     var file_frame = [],
         use_logo_default = $( '#yith_wcbr_use_logo_default'),
-        logo_default = $( '#yith_wcbr_logo_default' );
+        logo_default = $( '#yith_wcbr_logo_default'),
+        single_product_brands_position = $( '#yith_wcbr_single_product_brands_position'),
+        single_product_brands_content = $( '#yith_wcbr_single_product_brands_content'),
+        loop_product_brands_position = $( '#yith_wcbr_loop_product_brands_position'),
+        loop_product_brands_content = $( '#yith_wcbr_loop_product_brands_content');
 
     // handles upload image
-    $( '.upload_image_button').on( 'click', function( event ){
+    $( '.yith_wcbr_upload_image_button').on( 'click', function( event ){
         var t = $(this),
             id = t.attr('id');
 
@@ -48,7 +52,7 @@ jQuery( document ).ready( function( $ ){
     } );
 
     // handles remove image
-    $( '.remove_image_button').on( 'click', function( event ){
+    $( '.yith_wcbr_remove_image_button').on( 'click', function( event ){
         var t = $(this);
 
         event.preventDefault();
@@ -60,11 +64,11 @@ jQuery( document ).ready( function( $ ){
     } );
 
     // hide remove button when not needed
-    $( '.upload_image_id' ).each( function(){
+    $( '.yith_wcbr_upload_image_id' ).each( function(){
         var t = $(this);
 
         if( ! t.val() || t.val() == '0' ){
-            t.siblings( '.remove_image_button').hide();
+            t.siblings( '.yith_wcbr_remove_image_button').hide();
         }
     } );
 
@@ -79,4 +83,29 @@ jQuery( document ).ready( function( $ ){
             logo_default.parents( 'tr' ).hide();
         }
     }).change();
+
+    single_product_brands_position.on( 'change', function(){
+        var t = $(this);
+
+        if( t.val() == 'none' ){
+            single_product_brands_content.parents('tr').hide();
+        }
+        else{
+            single_product_brands_content.parents('tr').show();
+        }
+    }).change();
+
+    loop_product_brands_position.on( 'change', function(){
+        var t = $(this);
+
+        if( t.val() == 'none' ){
+            loop_product_brands_content.parents('tr').hide();
+        }
+        else{
+            loop_product_brands_content.parents('tr').show();
+        }
+    }).change();
+
+    // remove duplicated product_cat thumbnail form
+    $( '#product_cat_thumbnail').parents('.form-field').remove();
 } );

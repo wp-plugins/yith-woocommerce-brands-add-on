@@ -69,25 +69,27 @@ if ( ! class_exists( 'YITH_WCBR_Admin' ) ) {
 		public function __construct() {
 			// sets available tab
 			$this->available_tabs = apply_filters( 'yith_wcbr_available_admin_tabs', array(
-				'settings' => __( 'Settings', 'yith-wcbr' )
+				'settings' => __( 'Settings', 'yith-wcbr' ),
+				'premium' => __( 'Premium Version', 'yith-wcbr' )
 			) );
 
 			// register plugin panel
 			add_action( 'admin_menu', array( $this, 'register_panel' ), 5 );
+			add_action( 'yith_wcbr_premium_tab', array( $this, 'print_premium_tab' ) );
 
 			// register plugin links & meta row
 			add_filter( 'plugin_action_links_' . YITH_WCBR_INIT, array( $this, 'action_links' ) );
 			add_filter( 'plugin_row_meta', array( $this, 'add_plugin_meta' ), 10, 2 );
 
 			// register taxonomy custom fields
-			add_action( YITH_WCBR::$brands_taxonomy . '_add_form_fields', array( $this, 'add_brand_taxonomy_fields' ), 10, 1 );
-			add_action( YITH_WCBR::$brands_taxonomy . '_edit_form_fields', array( $this, 'edit_brand_taxonomy_fields' ), 10, 1 );
+			add_action( YITH_WCBR::$brands_taxonomy . '_add_form_fields', array( $this, 'add_brand_taxonomy_fields' ), 15, 1 );
+			add_action( YITH_WCBR::$brands_taxonomy . '_edit_form_fields', array( $this, 'edit_brand_taxonomy_fields' ), 15, 1 );
 			add_action( 'created_term', array( $this, 'save_brand_taxonomy_fields' ), 10, 3 );
 			add_action( 'edit_term', array( $this, 'save_brand_taxonomy_fields' ), 10, 3 );
 
 			// add taxonomy columns
-			add_filter( 'manage_edit-' . YITH_WCBR::$brands_taxonomy . '_columns', array( $this, 'brand_taxonomy_columns' ) );
-			add_filter( 'manage_' . YITH_WCBR::$brands_taxonomy . '_custom_column', array( $this, 'brand_taxonomy_column' ), 10, 3 );
+			add_filter( 'manage_edit-' . YITH_WCBR::$brands_taxonomy . '_columns', array( $this, 'brand_taxonomy_columns' ), 15 );
+			add_filter( 'manage_' . YITH_WCBR::$brands_taxonomy . '_custom_column', array( $this, 'brand_taxonomy_column' ), 15, 3 );
 
 			// Taxonomy page descriptions
 			add_action( YITH_WCBR::$brands_taxonomy . '_pre_add_form', array( $this, 'brand_taxonomy_description' ) );
@@ -208,7 +210,7 @@ if ( ! class_exists( 'YITH_WCBR_Admin' ) ) {
 
 				$image = str_replace( ' ', '%20', $image );
 
-				$columns .= '<img src="' . esc_url( $image ) . '" alt="' . __( 'Thumbnail', 'yith-wcbr' ) . '" class="wp-post-image" height="48" width="48" />';
+				$columns = '<img src="' . esc_url( $image ) . '" alt="' . __( 'Thumbnail', 'yith-wcbr' ) . '" class="wp-post-image" height="48" width="48" />';
 
 			}
 
@@ -237,8 +239,8 @@ if ( ! class_exists( 'YITH_WCBR_Admin' ) ) {
 			$args = array(
 				'create_menu_page' => true,
 				'parent_slug'   => '',
-				'page_title'    => __( 'Brands', 'yith-wcmc' ),
-				'menu_title'    => __( 'Brands', 'yith-wcmc' ),
+				'page_title'    => __( 'Brands', 'yith-wcbr' ),
+				'menu_title'    => __( 'Brands', 'yith-wcbr' ),
 				'capability'    => 'manage_options',
 				'parent'        => '',
 				'parent_page'   => 'yit_plugin_panel',
@@ -253,6 +255,16 @@ if ( ! class_exists( 'YITH_WCBR_Admin' ) ) {
 			}
 
 			$this->_panel = new YIT_Plugin_Panel_WooCommerce( $args );
+		}
+
+		/**
+		 * Print premium tab
+		 *
+		 * @return void
+		 * @since 1.0.0
+		 */
+		public function print_premium_tab() {
+			include( YITH_WCBR_DIR . 'templates/admin/brand-premium-panel.php' );
 		}
 
 		/* === PLUGIN LINK METHODS === */
@@ -281,11 +293,9 @@ if ( ! class_exists( 'YITH_WCBR_Admin' ) ) {
 				'<a href="' . admin_url( 'admin.php?page=yith_wcbr_panel&tab=settings' ) . '">' . __( 'Settings', 'yith-wcbr' ) . '</a>'
 			);
 
-			/*
-			if( ! defined( 'YITH_WCBR_PREMIUM' ) ){
+			if( ! defined( 'YITH_WCBR_PREMIUM_INIT' ) ){
 				$plugin_links[] = '<a target="_blank" href="' . $this->get_premium_landing_uri() . '">' . __( 'Premium Version', 'yith-wcbr' ) . '</a>';
 			}
-			*/
 
 			return array_merge( $links, $plugin_links );
 		}
@@ -304,7 +314,7 @@ if ( ! class_exists( 'YITH_WCBR_Admin' ) ) {
 
 			if ( $plugin_file == plugin_basename( YITH_WCBR_DIR . 'init.php' ) ) {
 				// documentation link
-				// $plugin_meta['documentation'] = '<a target="_blank" href="' . $this->doc_url . '">' . __( 'Plugin Documentation', 'yith-wcbr' ) . '</a>';
+				$plugin_meta['documentation'] = '<a target="_blank" href="' . $this->doc_url . '">' . __( 'Plugin Documentation', 'yith-wcbr' ) . '</a>';
 			}
 
 			return $plugin_meta;

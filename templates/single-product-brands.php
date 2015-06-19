@@ -17,26 +17,31 @@ global $product;
 
 <?php if( $product_has_brands ): ?>
 
-<span class="yith-wcbr-brands">
-	<?php echo $brands_label ?>
-	<?php echo get_the_term_list( $product->id, $brands_taxonomy, $before_term_list, $term_list_sep, $after_term_list ); ?>
-</span>
-<span class="yith-wcbr-brands-logo">
-	<?php foreach( $product_brands as $term ) {
-		$thumbnail_id = absint( get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true ) );
+	<?php if( ! isset( $content_to_show ) || ( $content_to_show == 'both' || $content_to_show == 'name' ) ): ?>
+		<span class="yith-wcbr-brands">
+			<?php echo $brands_label ?>
+			<?php echo get_the_term_list( $product->id, $brands_taxonomy, $before_term_list, $term_list_sep, $after_term_list ); ?>
+		</span>
+	<?php endif; ?>
 
-		if ( $thumbnail_id ) {
-			$image = wp_get_attachment_image_src( $thumbnail_id, 'yith_wcbr_logo_size' );
+	<?php if( ! isset( $content_to_show ) || ( $content_to_show == 'both' || $content_to_show == 'logo' ) ): ?>
+		<span class="yith-wcbr-brands-logo">
+			<?php foreach( $product_brands as $term ) {
+				$thumbnail_id = absint( get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true ) );
 
-			if( $image ){
-				echo sprintf( '<a href="%s"><img src="%s" width="%d" height="%d" alt="%s"/></a>', get_term_link( $term ), $image[0], $image[1], $image[2], $term->name );
+				if ( $thumbnail_id ) {
+					$image = wp_get_attachment_image_src( $thumbnail_id, 'yith_wcbr_logo_size' );
+
+					if( $image ){
+						echo sprintf( '<a href="%s"><img src="%s" width="%d" height="%d" alt="%s"/></a>', get_term_link( $term ), $image[0], $image[1], $image[2], $term->name );
+					}
+				}
+				else{
+					do_action( 'yith_wcbr_no_brand_logo', $term->term_id, $term, 'yith_wcbr_logo_size', false, false );
+				}
 			}
-		}
-		else{
-			do_action( 'yith_wcbr_no_brand_logo', $term->term_id, $term );
-		}
-	}
-	?>
-</span>
+			?>
+		</span>
+	<?php endif; ?>
 
 <?php endif; ?>

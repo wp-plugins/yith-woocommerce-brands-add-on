@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: YITH WooCommerce Brands Add-on
- * Plugin URI: http://yithemes.com/
+ * Plugin URI: http://yithemes.com/themes/plugins/yith-woocommerce-brands-add-on/
  * Description: YITH WooCommerce Brands Add-on allows you to add brands functionality to default WooCommerce plugin
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Yithemes
  * Author URI: http://yithemes.com/
  * Text Domain: yith-wcbr
@@ -100,7 +100,7 @@ if( ! function_exists( 'yith_wcbr_install_woocommerce_admin_notice' ) ) {
 	function yith_wcbr_install_woocommerce_admin_notice() {
 		?>
 		<div class="error">
-			<p><?php _e( 'YITH WooCommerce Brands Add-on is enabled but not effective. It requires WooCommerce in order to work.', 'yith-wcbr' ); ?></p>
+			<p><?php _e( 'YITH WooCommerce Brands is enabled but not effective. It requires WooCommerce in order to work.', 'yith-wcbr' ); ?></p>
 		</div>
 	<?php
 	}
@@ -110,7 +110,7 @@ if( ! function_exists( 'yith_wcbr_install_free_admin_notice' ) ){
 	function yith_wcbr_install_free_admin_notice() {
 		?>
 		<div class="error">
-			<p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Brands Add-on while using the premium one.', 'yith-wcbr' ); ?></p>
+			<p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Brands while you are using the premium one.', 'yith-wcbr' ); ?></p>
 		</div>
 	<?php
 	}

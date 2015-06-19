@@ -44,3 +44,19 @@ if( ! function_exists( 'yith_wcbr_get_template' ) ){
 		wc_get_template( $template_name, $args, $template_path, $default_path );
 	}
 }
+
+if( ! function_exists( 'yith_wcbr_add_slider_post_class' ) ){
+	/**
+	 * Add classes to posts for sliders
+	 *
+	 * @param $classes mixed Array of available class
+	 *
+	 * @return mixed Filtered array of classes
+	 * @since 1.0.0
+	 */
+	function yith_wcbr_add_slider_post_class( $classes ){
+		$classes[] = 'swiper-slide';
+
+		return $classes;
+	}
+}

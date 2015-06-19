@@ -17,9 +17,9 @@ if ( ! defined( 'YITH_WCBR' ) ) {
 	<td>
 		<div id="product_brand_thumbnail" style="float:left;margin-right:10px;"><img src="<?php echo $image; ?>" width="60px" height="60px" /></div>
 		<div style="line-height:60px;">
-			<input type="hidden" id="product_brand_thumbnail_id" class="upload_image_id" name="product_brand_thumbnail_id" value="<?php echo $thumbnail_id; ?>" />
-			<button id="product_brand_thumbnail_upload" type="submit" class="upload_image_button button"><?php _e( 'Upload/Add image', 'yith-wcbr' ); ?></button>
-			<button id="product_brand_thumbnail_remove" type="submit" class="remove_image_button button"><?php _e( 'Remove image', 'yith-wcbr' ); ?></button>
+			<input type="hidden" id="product_brand_thumbnail_id" class="yith_wcbr_upload_image_id" name="product_brand_thumbnail_id" value="<?php echo $thumbnail_id; ?>" />
+			<button id="product_brand_thumbnail_upload" type="submit" class="yith_wcbr_upload_image_button button"><?php _e( 'Upload/Add image', 'yith-wcbr' ); ?></button>
+			<button id="product_brand_thumbnail_remove" type="submit" class="yith_wcbr_remove_image_button button"><?php _e( 'Remove image', 'yith-wcbr' ); ?></button>
 		</div>
 		<div class="clear"></div>
 	</td>

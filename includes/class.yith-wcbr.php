@@ -156,7 +156,7 @@ if ( ! class_exists( 'YITH_WCBR' ) ) {
 			wp_register_style( 'yith-wcbr', $template );
 
 			if( is_product() || is_tax( self::$brands_taxonomy ) ){
-				do_action( 'yith-wcbr-enqueue-frontend-style' );
+				do_action( 'yith_wcbr_enqueue_frontend_style' );
 				wp_enqueue_style( 'yith-wcbr' );
 			}
 		}
@@ -170,7 +170,7 @@ if ( ! class_exists( 'YITH_WCBR' ) ) {
 		public function register_image_size() {
 			$single_thumb_width = apply_filters( 'yith_wcbr_single_thumb_width', 0 );
 			$single_thumb_height = apply_filters( 'yith_wcbr_single_thumb_height', 30 );
-			$single_thumb_crop = apply_filters( 'yith_wcbr_single_thumb_crop', false );
+			$single_thumb_crop = apply_filters( 'yith_wcbr_single_thumb_crop', true );
 
 			add_image_size( 'yith_wcbr_logo_size', $single_thumb_width, $single_thumb_height, $single_thumb_crop );
 		}

@@ -4,11 +4,11 @@ Contributors: yithemes
 Tags: brand, brands, logo, manufacturer, yit, e-commerce, ecommerce, shop, supplier, woocommerce brand, woocommerce filter, filter, brand filter, woocommerce manufacturer, woocommerce supplier, brands for woocommerce, brands for wc, product brands, brands for products
 Requires at least: 3.5.1
 Tested up to: 4.2.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-YITH WooCommerce Brands allows you to show brands in your store that are for online customers a very important additional reason for reliability.
+YITH WooCommerce Brands Add-on allows you to show brands in your store that are for online customers a very important additional reason for reliability.
 
 
 == Description ==
@@ -23,8 +23,6 @@ Showing known brands in your shop has many advantages both for you and for your 
 * You can assign one or more brands to each product
 * You can view brands of a product in single product page
 * You can view archive page for each brand
-
-
 
 == Installation ==
 
@@ -44,6 +42,12 @@ YITH WooCommerce Brands Add-on will add a new submenu called "Brands" under "YIT
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Added: WC 2.3.11 support
+* Fixed: minor bugs
+* Fixed: wrong text domain in some string localization
+
 = 1.0.0 =
 
 * Initial release
@@ -59,3 +63,7 @@ If you have suggestions about how to improve YITH WooCommerce Brands Add-On, you
 
 If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
 [use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Brands Add-On Languages.
+
+== Documentation ==
+
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woocommerce-brands-add-on).

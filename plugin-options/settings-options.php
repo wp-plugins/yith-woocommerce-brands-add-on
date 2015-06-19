@@ -17,7 +17,7 @@ return apply_filters(
 		'settings' => array(
 
 			'general-options' => array(
-				'title' => __( 'General', 'yith-wctc' ),
+				'title' => __( 'General', 'yith-wcbr' ),
 				'type' => 'title',
 				'desc' => '',
 				'id' => 'yith_wcbr_general_options'
@@ -28,7 +28,7 @@ return apply_filters(
 				'name'      => __( 'Brand label', 'yith-wcbr' ),
 				'type'      => 'text',
 				'desc'      => __( 'Label used for "Brand" link', 'yith-wcbr' ),
-				'default'   => __( 'Brands:', 'yith-wcbr' ),
+				'default'   => __( 'Brand:', 'yith-wcbr' ),
 				'css'       => 'min-width:300px;'
 			),
 
