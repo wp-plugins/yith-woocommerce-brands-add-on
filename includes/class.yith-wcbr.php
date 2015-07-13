@@ -58,6 +58,7 @@ if ( ! class_exists( 'YITH_WCBR' ) ) {
 
 			// register brand taxonomy
 			add_action( 'init', array( $this, 'register_taxonomy' ) );
+			add_filter( 'yith_wcan_product_taxonomy_type', array( $this, 'add_ajax_navigation_taxonomy' ) );
 
 			// add brand template to products page
 			add_action( 'woocommerce_product_meta_end', array( $this, 'add_single_product_brand_template' ) );
@@ -123,6 +124,20 @@ if ( ! class_exists( 'YITH_WCBR' ) ) {
 			 register_taxonomy( self::$brands_taxonomy, 'product', $taxonomy_args );
 			 register_taxonomy_for_object_type( self::$brands_taxonomy, 'product' );
 		 }
+
+		/**
+		 * Add compatibility to Ajax Navigation, forcing widget to display on brands archive pages
+		 *
+		 * @param $tax array Valid product taxonomies where to show ajax navigation widget
+		 * @return array Filtered array
+		 * @since 1.0.0
+		 */
+		public function add_ajax_navigation_taxonomy( $tax ) {
+			return array_merge(
+				$tax,
+				array( self::$brands_taxonomy )
+			);
+		}
 		
 		/* === FRONTEND METHODS === */
 
