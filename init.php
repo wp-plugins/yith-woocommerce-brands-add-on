@@ -3,7 +3,7 @@
  * Plugin Name: YITH WooCommerce Brands Add-on
  * Plugin URI: http://yithemes.com/themes/plugins/yith-woocommerce-brands-add-on/
  * Description: YITH WooCommerce Brands Add-on allows you to add brands functionality to default WooCommerce plugin
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Yithemes
  * Author URI: http://yithemes.com/
  * Text Domain: yith-wcbr

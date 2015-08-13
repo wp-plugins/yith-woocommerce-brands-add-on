@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Brands Add-On\n"
-"POT-Creation-Date: 2015-06-19 11:25+0100\n"
+"POT-Creation-Date: 2015-08-13 10:41+0100\n"
 "PO-Revision-Date: 2015-04-30 17:08+0100\n"
 "Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../includes/class.yith-wcbr-admin.php:242
 #: ../includes/class.yith-wcbr-admin.php:243
-#: ../includes/class.yith-wcbr.php:96 ../includes/class.yith-wcbr.php:112
+#: ../includes/class.yith-wcbr.php:97 ../includes/class.yith-wcbr.php:113
 msgid "Brands"
 msgstr ""
 
@@ -64,51 +64,51 @@ msgstr ""
 msgid "Plugin Documentation"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:97
+#: ../includes/class.yith-wcbr.php:98
 msgid "Brand"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:98
+#: ../includes/class.yith-wcbr.php:99
 msgid "All Brands"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:99
+#: ../includes/class.yith-wcbr.php:100
 msgid "Edit Brand"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:100
+#: ../includes/class.yith-wcbr.php:101
 msgid "View Brand"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:101
+#: ../includes/class.yith-wcbr.php:102
 msgid "Update Brand"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:102
+#: ../includes/class.yith-wcbr.php:103
 msgid "Add New Brand"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:103
+#: ../includes/class.yith-wcbr.php:104
 msgid "New Brand Name"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:104
+#: ../includes/class.yith-wcbr.php:105
 msgid "Parent Brand"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:105
+#: ../includes/class.yith-wcbr.php:106
 msgid "Parent Brand:"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:106
+#: ../includes/class.yith-wcbr.php:107
 msgid "Search Brands"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:107
+#: ../includes/class.yith-wcbr.php:108
 msgid "Separate brands with commas"
 msgstr ""
 
-#: ../includes/class.yith-wcbr.php:108
+#: ../includes/class.yith-wcbr.php:109
 msgid "No Brands Found"
 msgstr ""
 
